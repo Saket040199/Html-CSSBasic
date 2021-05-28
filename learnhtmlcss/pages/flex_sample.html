@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexbox</title>
+        <style>
+            body { padding: 2em; }
+
+            .headerContainer {
+              display: flex;
+              flex-flow: column wrap;
+              align-content: center;
+              background: tomato;
+              font-weight: bold;
+              color: whitesmoke;
+              padding: 10px;
+            }
+
+            .footerContainer {
+              display: flex;
+              flex-flow: column wrap;
+              align-content: center;
+              background: lightgreen;
+              font-weight: bold;
+              color: whitesmoke;
+              padding: 10px; 
+            }
+
+            .mainContainer{
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem{
+                text-align: center;
+                background: deepskyblue;
+            }
+            article{
+                padding: 10px;
+                margin: 10px;
+                background: skyblue;
+            }
+
+            .sideBarLeftItem {background: gold;}
+            .sideBarRightItem {background: hotpink;}
+             
+             .sideBarItem {flex: 2 0 0;border: 0px solid green;}
+             .mainContentItem {flex:3 0px;}
+             .sideBarLeftItem {order: 1;}
+             .mainContentItem {order: 2;}
+             .sideBarRightItem {order: 3;}
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample FlexBox</h1></header>
+        <div class="mainContainer">
+           <section class="mainContentItem">
+              <article>
+                  <h2> First Article</h2>
+                  <p>HTML (Hypertext Markup Language) is the code that is used to structure a web page <br>
+                      and its content. For example, content could be structured within a set of paragraphs, <br>
+                       a list of bulleted points, or using images and data tables.</p>
+
+              </article>
+              <article>
+                <h2> First Article</h2>
+                <p>HTML (Hypertext Markup Language) is the code that is used to structure a web page <br>
+                     and its content. For example, content could be structured within a set of paragraphs,<br>
+                      a list of bulleted points, or using images and data tables.</p>
+                
+            </article>
+            <article>
+                <h2> First Article</h2>
+                <p>HTML (Hypertext Markup Language) is the code that is used to structure a web page <br>
+                     and its content. For example, content could be structured within a set of paragraphs,<br>
+                      a list of bulleted points, or using images and data tables.</p>
+                
+            </article>
+           </section>
+           <sideBar class="sidebarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sideBar>
+           <sideBar class="sidebarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sideBar>
+        </div>
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
